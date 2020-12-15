@@ -62,7 +62,7 @@ output <-
 
   First, this study investigated tree prevalence per plot. The results of this analysis can be viewed in Table 1. These percentages were later used to calculate squared quadratic mean diameters (QMD2) of estimated fine woody debris (FWD). As seen in Table 1, there was a high variance of forest composition across plots. Further, when aggregated up to compartment level there was also a decent amount of variance for which tree species had a higher prevalence compared to others. This is important to note as this variance may explain some of the results we are seeing in the linear regression and could be another question that is asked in this study. 
 
-```{r echo = FALSE, message=FALSE, warning=FALSE, results=FALSE, fig.align='center'}
+```{r echo = FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 
 kable(p_plot[],
       digits = 3,
@@ -141,7 +141,7 @@ grid.arrange(A, B,C, nrow =3)
 
    The third and final aspect of this pilot study was to test these variables, actual and estimated FWD QMD2, in a linear regression to see if there is any significant relationship between the two. This analysis began with running a correlation between both variables for each fuel time-lag class. The correlation for one hour fuels was 0.5470003, the correlation for ten hour fuels was - 0.3801208, and the correlation for 100 hour fuels was 0.1425832. While none of these values were close to 1 or -1, suggesting a strong linear correlation, it was hard to conclude anything explicit from these values. Therefore, a linear regression model was run for each time-lag class comparing both actual and estimated values. The residuals for this model can be viewed in Figure 2. As seen in Figure 2, all three of the time-lag classes have residuals that fluctuate relatively evenly across zero and relatively dispersed along the x-axis, estimated QMD2. The statistical values from the linear regression model can be viewed in Table 2, whereas Figure 3 displays the results in a graph. As seen in Figure 3 and suspected from the previous histograms, estimated and observed one hour fuels have a statistically significantly linear relationship. Therefore, it is fair to conclude that van Wagtendonk’s approach for estimating FWD QMD2 is quite accurate for one hour fuel loads. Furthermore, ten hour fuels show no linear relationship between estimated and observed QMD2. As seen in Figure 3, it appears that van Wagtendonk’s approach for estimating FWD QMD2 underestimated ten hour fuels. Lastly, 100 hour fuels seem to be fairly represented by estimated QMD2 values. The linear regression falls very close to a perfectly linear model. That being said this model has particularly large standard error brackets where this may not be true when investigated further. 
 
-```{r echo = FALSE, message=FALSE, warning=FALSE, results=FALSE, fig.align='center'}
+```{r echo = FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 kable(output[], 
       digits = c(0, 4, 4, 4, 4 ), 
       align= "c",
